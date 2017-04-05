@@ -1,0 +1,14 @@
+<teams xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns="http://www.example.com/teams"
+             xsi:schemaLocation="http://www.example.com/teams team.xsd">
+    <team>
+        <id>1</id>
+        <name>BATE</name>
+        <city>Borisov</city>
+    </team>
+    <team>
+        <id>2</id>
+        <name>Granit</name>
+        <city>Mikashevichi</city>
+    </team>
+</teams>

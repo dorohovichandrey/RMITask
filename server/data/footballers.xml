@@ -1,0 +1,18 @@
+<footballers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://www.example.com/footballers"
+          xsi:schemaLocation="http://www.example.com/footballers footballer.xsd">
+   <footballer>
+       <id>1</id>
+       <name>Dario</name>
+       <surname>Srna</surname>
+       <age>35</age>
+       <teamId>1</teamId>
+   </footballer>
+    <footballer>
+        <id>2</id>
+        <name>Sergei</name>
+        <surname>Kornilenko</surname>
+        <age>34</age>
+        <teamId>2</teamId>
+    </footballer>
+</footballers>

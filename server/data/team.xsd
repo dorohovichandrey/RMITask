@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.com/teams"
+        xmlns:tns="http://www.example.com/teams"
+        elementFormDefault="qualified">
+    <element name="team" type="tns:Team"></element>
+
+
+    <element name="teams">
+        <complexType>
+            <sequence>
+                <element ref="tns:team" minOccurs="2" maxOccurs="unbounded" />
+            </sequence>
+        </complexType>
+    </element>
+
+    <complexType name="Team">
+        <sequence>
+            <element name="id" type="tns:Id" />
+            <element name="name" type="string" />
+            <element name="city" type="string" />
+        </sequence>
+    </complexType>
+
+    <simpleType name="Id">
+        <restriction base="positiveInteger">
+            <maxInclusive value="10000"></maxInclusive>
+        </restriction>
+    </simpleType>
+</schema>

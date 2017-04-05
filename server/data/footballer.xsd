@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.com/footballers"
+        xmlns:tns="http://www.example.com/footballers"
+        elementFormDefault="qualified">
+    <element name="footballer" type="tns:Footballer"></element>
+
+
+    <element name="footballers">
+        <complexType>
+            <sequence>
+                <element ref="tns:footballer" minOccurs="2" maxOccurs="unbounded" />
+            </sequence>
+        </complexType>
+    </element>
+
+    <complexType name="Footballer">
+        <sequence>
+            <element name="id" type="tns:Id" />
+            <element name="name" type="string" />
+            <element name="surname" type="string" />
+            <element name="age" type="int" />
+            <element name="teamId" type="int"/>
+        </sequence>
+    </complexType>
+
+    <simpleType name="Id">
+        <restriction base="positiveInteger">
+            <maxInclusive value="10000"></maxInclusive>
+        </restriction>
+    </simpleType>
+</schema>
